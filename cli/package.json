@@ -1,11 +1,14 @@
 {
-  "name": "once-cli",
+  "name": "@once/cli",
   "version": "1.0.0",
   "description": "Command-line Interface Tools for Once",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "transpile": "babel src -d dist"
   },
+  "bin": "dist/index.js",
   "keywords": [
     "Once",
     "CLI"
@@ -22,5 +25,26 @@
     "lodash": "^4.17.11",
     "minimist": "^1.2.0",
     "touch": "^3.1.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "transform-es2015-modules-commonjs"
+        ]
+      }
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/runtime": "^7.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "jest": "^24.1.0"
   }
 }

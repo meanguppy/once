@@ -1,8 +1,9 @@
 {
-  "name": "@once",
+  "name": "once",
   "version": "1.0.0",
   "description": "The build once, use everywhere app framework",
   "main": "index.js",
+  "bin": "./index.js",
   "directories": {
     "doc": "docs",
     "example": "examples"
