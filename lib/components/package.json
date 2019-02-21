@@ -1,0 +1,25 @@
+{
+  "name": "@once/components",
+  "version": "1.0.0-alpha.0",
+  "description": "Globals Library for Once",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "transpile": "tsc --p tsconfig.json"
+  },
+  "keywords": [
+    "Once",
+    "CLI"
+  ],
+  "author": "Leo Schultz & Thomas Hessler & Justin Pogrob",
+  "license": "ISC",
+  "dependencies": {
+    "@once/core": "file:../core",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "typescript": "^3.3.3"
+  }
+}
